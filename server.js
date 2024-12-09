@@ -36,6 +36,10 @@ app.use(
 
 app.use(cookie());
 
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/product", productRoutes);
 app.use("/api/v1/category", categoryRoutes);
